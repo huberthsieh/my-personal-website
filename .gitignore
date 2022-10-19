@@ -1,3 +1,7 @@
+# Base Directions
 node_modules/
 .cache/
 public
+
+# Files
+.idea
