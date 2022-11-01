@@ -12,12 +12,12 @@ const links = [
     {
         id: 2,
         url: '/portfolio',
-        text: 'AAA'
+        text: 'portfolio'
     },
     {
         id: 3,
         url: '/BLOG',
-        text: 'BBB'
+        text: 'blog'
     },
     {
         id: 4,
@@ -36,13 +36,7 @@ const links = [
     }
 ]
 
-// const isActive = true;
-
-const useEffect = (() => {
-    console.log('First Rendering');
-}, [])
-
-const Header = props => {
+const Header = () => {
     return (
         <CustomHeader id="header">
             {
@@ -54,10 +48,6 @@ const Header = props => {
     );
 };
 
-// Header.propTypes = {
-//
-// };
-
 const CustomHeader = styled.header`
     width: 100%;
     height: auto;
@@ -65,11 +55,17 @@ const CustomHeader = styled.header`
   
     a {
         border: solid 2px ${props => props.theme.black};
+        border-bottom: none;
         width: calc(100% / 6);
         text-align: center;
+        text-transform: uppercase;
         padding: 12px 24px;
         font-size: 18px;
         font-weight: 700;
+      
+        &:last-child {
+            background-color: ${props => props.theme.purple};
+        }
       
         &:not(:last-child) {
             border-right: none;

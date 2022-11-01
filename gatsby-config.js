@@ -3,7 +3,7 @@ module.exports = {
         title: `my-personal-website`,
         siteUrl: `https://www.yourdomain.tld`
     },
-    plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", {
+    plugins: [`gatsby-plugin-sass`, "gatsby-plugin-styled-components", "gatsby-plugin-image", {
         resolve: 'gatsby-plugin-manifest',
         options: {
             "icon": "src/images/icon.png"
